@@ -32,12 +32,6 @@ button {
     outline: none;
 }
 
-/* #reset {
-  position: absolute;
-  bottom: 20vh;
-  right: 35vw;
-} */
-
 #reset:hover {
     color: red;
     border-color: red;

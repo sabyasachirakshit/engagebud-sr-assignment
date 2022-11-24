@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import image from "../well 2.png";
+import image from "../wheel.png";
 import "../index.css";
 import { useState } from "react";
 
