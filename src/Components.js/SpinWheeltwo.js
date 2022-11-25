@@ -183,7 +183,7 @@ class SpinWheeltwo extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Spinning Prize Wheel React</h1>
+        <h1>Lottery Wheel</h1>
         <span id="selector">&#9660;</span>
         <canvas
           id="wheel"

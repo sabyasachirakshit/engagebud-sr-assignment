@@ -17,7 +17,7 @@ button {
 #spin,
 #reset {
   position: absolute;
-  bottom: 10vh;
+  bottom: 15vh;
   right: 47vw;
 }
 
@@ -30,12 +30,6 @@ button {
 #reset:focus {
   outline: none;
 }
-
-/* #reset {
-  position: absolute;
-  bottom: 20vh;
-  right: 35vw;
-} */
 
 #reset:hover {
   color: red;
@@ -67,7 +61,7 @@ input {
   border-bottom: 1px solid black;
 }
 
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 768px) {
     
   #code {
     position: relative;
