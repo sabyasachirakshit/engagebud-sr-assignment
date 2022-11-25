@@ -1,14 +1,14 @@
 import { Route, Routes } from "react-router-dom";
 import Login from "./Components.js/Login";
 import Result from "./Components.js/Result";
-import SpinWheel from "./Components.js/SpinWheel";
+import SpinWheeltwo from "./Components.js/SpinWheeltwo";
 
 function App() {
   return (
     <div className="d-flex justify-content-center">
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/spinWheel" element={<SpinWheel />} />
+        <Route path="/spinWheel" element={<SpinWheeltwo />} />
         <Route path="/result" element={<Result />} />
       </Routes>
     </div>
