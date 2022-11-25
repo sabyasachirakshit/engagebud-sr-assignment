@@ -21,6 +21,7 @@ class SpinWheeltwo extends React.Component {
     net: null, // RADIANS
     result: null, // INDEX
     spinning: false,
+    value: null,
   };
 
   componentDidMount() {
@@ -155,6 +156,7 @@ class SpinWheeltwo extends React.Component {
     this.setState({
       net: netRotation,
       result: result,
+      value: Math.random().toString(36).slice(2),
     });
   };
 
@@ -164,8 +166,18 @@ class SpinWheeltwo extends React.Component {
       rotate: 0,
       easeOut: 0,
       result: null,
+      value: null,
       spinning: false,
     });
+  };
+
+  copyHandler = (e) => {
+    e.preventDefault();
+    let copiedText = document.getElementById("code");
+    copiedText.select();
+    copiedText.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(copiedText.value);
+    alert("Copied the text: " + copiedText.value);
   };
 
   render() {
@@ -192,11 +204,32 @@ class SpinWheeltwo extends React.Component {
             spin
           </button>
         )}
-        <div class="display">
-          <span id="readout">
-            YOU WON:{"  "}
+
+        <div className="row">
+          <h5>Congrats! You Won:</h5>
+          <h3>
             <span id="result">{this.state.list[this.state.result]}</span>
-          </span>
+          </h3>
+        </div>
+        <div className="row">
+          <form>
+            <div className="mb-3">
+              USE THIS CODE FOR PURCHASE
+              <input
+                type="text"
+                readOnly
+                value={this.state.value}
+                id="code"
+                className="form-control"
+              />
+              <button
+                onClick={this.copyHandler}
+                className="btn btn-primary mt-2"
+              >
+                Close Panel & Copy
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     );

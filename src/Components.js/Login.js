@@ -41,6 +41,7 @@ function Login() {
   return (
     <div className="d-flex m-2 p-2 flex-column" style={{ maxWidth: "300px" }}>
       <div className="row flex-sm-column">
+        <h1>EngageBud Assignment</h1>
         <form>
           <div className="mb-3">
             <label className="from-label">Email</label>

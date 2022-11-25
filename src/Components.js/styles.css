@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(to left,rgb(138, 52, 52),rgb(97, 97, 199));
+  background: linear-gradient(to left, rgb(138, 52, 52), rgb(97, 97, 199));
 }
 
 .App {
@@ -11,14 +11,14 @@ button {
   background: none;
   border: 1px solid black;
   font-size: 20px;
-  border-radius:5px;
+  border-radius: 5px;
 }
 
-
-#spin, #reset {
+#spin,
+#reset {
   position: absolute;
-  bottom: 20vh;
-  right: 45vw;
+  bottom: 10vh;
+  right: 47vw;
 }
 
 #spin:hover {
@@ -26,8 +26,9 @@ button {
   border-color: rgb(0, 180, 120);
 }
 
-#spin:focus, #reset:focus {
-  outline:none;
+#spin:focus,
+#reset:focus {
+  outline: none;
 }
 
 /* #reset {
@@ -41,14 +42,11 @@ button {
   border-color: red;
 }
 
-
-
 #readout {
   position: absolute;
   bottom: 7vh;
   left: 35vw;
 }
-
 
 #selector {
   position: absolute;
@@ -58,13 +56,22 @@ button {
   z-index: 3;
 }
 
-#result{
-  font-size:50px;
+#result {
+  font-size: 50px;
   color: rgb(0, 180, 120);
 }
 
 input {
   font-size: 16px;
-  border:none;
-  border-bottom: 1px solid black
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    
+  #code {
+    position: relative;
+    left: 123px;
+    width: 50%;
+  }
 }
