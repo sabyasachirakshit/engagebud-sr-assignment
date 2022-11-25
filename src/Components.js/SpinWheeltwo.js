@@ -5,18 +5,13 @@ import "./styles.css";
 class SpinWheeltwo extends React.Component {
   state = {
     list: [
-      "$100",
-      "$500",
-      "$9,999",
-      "$1",
-      "$60",
-      "$1,000",
-      "$4.44",
-      "$0",
-      "$333"
+      "Flat 20% off",
+      "Blanc 50ml ₹499",
+      "Free Gift Box",
+      "Flat ₹500 off",
+      "EDT NOIR ₹999",
+      "₹5,000 Voucher",
     ],
-    // list: ["$100", "$500", "$9,999", "$1", "$60", "$1,000", "$4.44"],
-    // list: ["$100","$500","$9,999","$1","$60"],
     radius: 75, // PIXELS
     rotate: 0, // DEGREES
     easeOut: 0, // SECONDS
@@ -25,7 +20,7 @@ class SpinWheeltwo extends React.Component {
     offset: null, // RADIANS
     net: null, // RADIANS
     result: null, // INDEX
-    spinning: false
+    spinning: false,
   };
 
   componentDidMount() {
@@ -38,7 +33,7 @@ class SpinWheeltwo extends React.Component {
     let numOptions = this.state.list.length;
     let arcSize = (2 * Math.PI) / numOptions;
     this.setState({
-      angle: arcSize
+      angle: arcSize,
     });
 
     // get index of starting position of selector
@@ -77,7 +72,7 @@ class SpinWheeltwo extends React.Component {
 
     this.setState({
       top: topSpot - 1,
-      offset: degreesOff
+      offset: degreesOff,
     });
   };
 
@@ -128,7 +123,7 @@ class SpinWheeltwo extends React.Component {
     this.setState({
       rotate: randomSpin,
       easeOut: 2,
-      spinning: true
+      spinning: true,
     });
 
     // calcalute result after wheel stops spinning
@@ -137,7 +132,7 @@ class SpinWheeltwo extends React.Component {
     }, 2000);
   };
 
-  getResult = spin => {
+  getResult = (spin) => {
     // find net rotation and add to offset angle
     // repeat substraction of inner angle amount from total distance traversed
     // use count as an index to find value of result from state list
@@ -159,7 +154,7 @@ class SpinWheeltwo extends React.Component {
     // set state variable to display result
     this.setState({
       net: netRotation,
-      result: result
+      result: result,
     });
   };
 
@@ -169,7 +164,7 @@ class SpinWheeltwo extends React.Component {
       rotate: 0,
       easeOut: 0,
       result: null,
-      spinning: false
+      spinning: false,
     });
   };
 
@@ -184,9 +179,7 @@ class SpinWheeltwo extends React.Component {
           height="500"
           style={{
             WebkitTransform: `rotate(${this.state.rotate}deg)`,
-            WebkitTransition: `-webkit-transform ${
-              this.state.easeOut
-            }s ease-out`
+            WebkitTransition: `-webkit-transform ${this.state.easeOut}s ease-out`,
           }}
         />
 
